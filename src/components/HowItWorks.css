@@ -1,0 +1,81 @@
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    /* Extra margin for overlapping the wave if needed */
+}
+
+.step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    position: relative;
+}
+
+.step-number-wrapper {
+    position: absolute;
+    top: -30px;
+    width: 80px;
+    height: 80px;
+    background-color: #EAF0DC;
+    /* Light green circle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    font-family: serif;
+    /* The image uses a serif or classic style font for numbering */
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.step-description {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex: 1;
+    /* Pushes the button to the bottom */
+}
+
+.btn-step {
+    background-color: var(--accent-green-light);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: auto;
+    /* Ensures button stays at bottom */
+}
+
+.btn-step:hover {
+    background-color: #aeb58c;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        /* More gap to account for absolute positioning */
+    }
+}

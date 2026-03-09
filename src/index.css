@@ -1,0 +1,432 @@
+/* =========================
+   KOOTT GLOBAL THEME
+   Darker variant of same palette
+   ========================= */
+
+:root {
+
+  /* Navy (slightly darker) */
+  --primary-blue: #182642;
+
+  /* Olive (deeper) */
+  --accent-green: #6f7f3d;
+
+  /* Light Beige background */
+  --bg-cream: #efe6d6;
+
+  /* Card color */
+  --bg-white: #ffffff;
+
+  /* Main text */
+  --text-main: #141111;
+
+  /* Secondary text */
+  --text-soft: #5b6570;
+
+  /* Border color */
+  --border-soft: #e3dacb;
+
+}
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: var(--bg-cream);
+  color: var(--text-main);
+
+  line-height: 1.6;
+
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 0;
+
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--bg-cream)
+}
+
+/* NAV LINKS */
+
+.navbar-links {
+
+  list-style: none;
+  display: flex;
+  gap: 30px;
+
+}
+
+.nav-item {
+
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  color: whitesmoke;
+  transition: color 0.3s ease;
+
+}
+
+.nav-item:hover {
+  color: var(--accent-green);
+}
+
+/* underline hover animation */
+
+.nav-item::after {
+
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+
+  background: var(--accent-green);
+
+  transition: width 0.3s ease;
+
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn {
+
+  background: var(--bg-cream);
+  border: none;
+  color: rgb(247, 244, 244);
+
+  padding: 8px 18px;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+}
+
+.login-btn:hover {
+
+  background: #5f6e32;
+  transform: scale(1.05);
+
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 80px 0;
+
+}
+
+.hero-title {
+
+  font-size: 48px;
+  font-weight: 700;
+  color: whitesmoke;
+
+}
+
+.text-accent {
+  color: var(--accent-green);
+}
+
+.hero-subtitle {
+
+  margin-top: 15px;
+  color: var(--text-soft);
+
+}
+
+/* SEARCH BAR */
+
+.hero-search {
+
+  margin-top: 25px;
+
+  display: flex;
+  gap: 10px;
+
+}
+
+.hero-search input {
+
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid var(--border-soft);
+
+  width: 260px;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+
+}
+
+.hero-search input:focus {
+
+  border-color: var(--accent-green);
+  box-shadow: 0 0 6px rgba(111,127,61,0.3);
+
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary {
+
+  background: var(--accent-green);
+  border: none;
+
+  color: white;
+
+  padding: 12px 22px;
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+}
+
+.btn-primary:hover {
+
+  background: #5f6e32;
+  transform: scale(1.05);
+
+}
+
+/* =========================
+   SECTION SPACING
+   ========================= */
+
+.section-spacing {
+
+  margin-top: 80px;
+
+}
+
+/* =========================
+   PROJECT GRID
+   ========================= */
+
+.projects-grid {
+
+  margin-top: 30px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
+
+}
+
+/* =========================
+   PROJECT CARD
+   ========================= */
+
+.project-card {
+
+  background: var(--bg-white);
+
+  padding: 20px;
+  border-radius: 14px;
+
+  border: 1px solid var(--border-soft);
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+}
+
+.project-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+
+}
+
+.card-title {
+
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
+.card-skills {
+
+  margin-top: 8px;
+  color: var(--accent-green);
+  font-size: 14px;
+
+}
+
+.card-description {
+
+  margin-top: 10px;
+  color: var(--text-soft);
+  font-size: 14px;
+
+}
+
+/* =========================
+   OPPORTUNITIES
+   ========================= */
+
+.opportunities-grid {
+
+  margin-top: 30px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
+
+}
+
+.btn-view-all {
+
+  background: none;
+  border: 1px solid var(--border-soft);
+
+  padding: 6px 16px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+}
+
+.btn-view-all:hover {
+
+  background: var(--accent-green);
+  color: white;
+
+}
+
+/* =========================
+   HOW IT WORKS
+   ========================= */
+
+.steps-grid {
+
+  margin-top: 40px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 30px;
+
+}
+
+.step-card {
+
+  background: var(--bg-white);
+
+  padding: 25px;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border-soft);
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+
+}
+
+.step-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+
+}
+
+/* =========================
+   HERO CURVE BACKGROUND
+   ========================= */
+
+.hero-bg-curve {
+
+  position: absolute;
+
+  width: 100%;
+  height: 400px;
+
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(
+    135deg,
+    #182642,
+    #1f2f4d
+  );
+
+  z-index: -1;
+
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+}

@@ -1,0 +1,119 @@
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.btn-view-all {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.btn-view-all:hover {
+    color: var(--text-main);
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 2rem;
+}
+
+.opportunity-card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 16px;
+    padding: 2rem;
+    min-height: 200px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.opp-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+
+.opp-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.opp-skills {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.opp-description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.opp-icon-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.opp-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opp-icon svg {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.author-avatar-small {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
+.author-name-small {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+@media (max-width: 992px) {
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+}

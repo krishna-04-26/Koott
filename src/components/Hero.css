@@ -1,0 +1,194 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    position: relative;
+    z-index: 10;
+    color: var(--text-light);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.text-accent {
+    color: var(--accent-yellow);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    max-width: 90%;
+}
+
+.search-bar {
+    display: flex;
+    background-color: var(--bg-white);
+    border-radius: 30px;
+    padding: 0.4rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.search-icon {
+    margin-right: 0.5rem;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-main);
+    outline: none;
+}
+
+.btn-get-started {
+    background-color: var(--accent-green-light);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-get-started:hover {
+    background-color: #aeb58c;
+    transform: translateY(-2px);
+}
+
+/* Illustration styling (simplified abstraction of the image) */
+.hero-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.illustration-placeholder {
+    width: 500px;
+    height: 400px;
+    position: relative;
+    /* Abstracting the background blob */
+    background: #E8F0F2;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border-bottom-right-radius: 80% 20%;
+    border-bottom-left-radius: 20% 80%;
+    overflow: visible;
+}
+
+.person {
+    position: absolute;
+    border-radius: 20px 20px 0 0;
+}
+
+.person-1 {
+    /* Left girl */
+    width: 90px;
+    height: 160px;
+    background: #A67B5B;
+    /* skin/hair tone */
+    bottom: 80px;
+    left: 60px;
+    border-radius: 40px 40px 10px 10px;
+}
+
+.person-2 {
+    /* Middle girl */
+    width: 100px;
+    height: 180px;
+    background: #1C334A;
+    /* dark blue shirt */
+    bottom: 80px;
+    left: 150px;
+    border-radius: 50px 50px 10px 10px;
+}
+
+.person-3 {
+    /* Middle guy */
+    width: 110px;
+    height: 220px;
+    background: #8FA988;
+    /* green shirt */
+    bottom: 120px;
+    left: 240px;
+    border-radius: 50px 50px 10px 10px;
+}
+
+.person-4 {
+    /* Right guy */
+    width: 100px;
+    height: 200px;
+    background: #B6C39F;
+    /* light green shirt */
+    bottom: 90px;
+    right: 50px;
+    border-radius: 50px 50px 10px 10px;
+}
+
+.table {
+    position: absolute;
+    width: 320px;
+    height: 120px;
+    background: #D9B48F;
+    /* table color */
+    border-radius: 50%;
+    bottom: 40px;
+    left: 100px;
+    z-index: 2;
+}
+
+.laptop {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background: #3B5270;
+    border-radius: 5px;
+    bottom: 100px;
+    left: 180px;
+    z-index: 3;
+}
+
+.speech-bubble {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    background: #E8D070;
+    border-radius: 50%;
+    top: 50px;
+    left: 220px;
+    opacity: 0.8;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #E8D070 transparent transparent transparent;
+}
